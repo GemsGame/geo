@@ -1,0 +1,50 @@
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/mixins';
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: rgba(0, 123, 255, 1);
+}
+
+.collapsed {
+  max-width: 75px;
+  margin-left: 0;
+}
+
+@keyframes rotate1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes rotate2 {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.icon-rotate1 {
+  animation-name: rotate1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.icon-rotate2 {
+  animation-name: rotate2;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.sidebar-arrow {
+  display: flex;
+  justify-content: flex-end;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
